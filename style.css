@@ -1,0 +1,149 @@
+:root {
+  --bg: lavender;
+  --card: #fff;
+  --text: #121417;
+  --muted: #6b7280;
+  --primary: #4caf50;
+  --primary-pressed: #3c9041;
+  --border: #e5e7eb;
+  --danger: #e11d48;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 920px;
+  margin: 24px auto;
+  background: var(--card);
+  padding: 28px 28px 36px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.06);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 6px;
+  font-size: 38px;
+}
+h3 {
+  text-align: center;
+  margin: 0 0 22px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1 1 0;
+  min-width: 180px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini {
+  min-width: 100px;
+}
+
+.mini-row {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:active { background: var(--primary-pressed); }
+
+.btn-muted {
+  background: #9ca3af;
+  color: #fff;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-size: 14px;
+}
+thead th {
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.action-btn {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.action-btn:active { transform: translateY(1px); }
+
+.result-box {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
