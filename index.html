@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <h3>Calculate your Body Mass Index</h3>
+
+    <!-- Name & Age -->
+    <div class="row">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="e.g. John Doe" />
+      </div>
+      <div class="field">
+        <label for="age">Age</label>
+        <input id="age" type="number" min="0" placeholder="e.g. 25" />
+      </div>
+    </div>
+
+    <!-- Weight, Height & Units -->
+    <div class="row">
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="e.g. 70">
+      </div>
+
+      <!-- For meters or centimeters -->
+      <div id="height-m-cm" class="form-group">
+        <label for="height">Height</label>
+        <input type="number" id="height" placeholder="e.g. 1.75">
+      </div>
+
+      <!-- For feet and inches in same row -->
+      <div id="height-ft-in" class="form-group mini-row" style="display:none;">
+        <div class="form-group mini">
+          <label for="feet">Feet</label>
+          <input type="number" id="feet" placeholder="e.g. 5">
+        </div>
+        <div class="form-group mini">
+          <label for="inches">Inches</label>
+          <input type="number" id="inches" placeholder="e.g. 8">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="units">Units</label>
+        <select id="units">
+          <option value="meters">meters (m)</option>
+          <option value="centimeters">centimeters (cm)</option>
+          <option value="feet-inches">feet/inches</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <button id="btnCompute" class="btn btn-primary">Compute BMI</button>
+    <button id="btnReset" class="btn btn-muted">Reset</button>
+    <button id="btnSave" class="btn btn-muted">Save to history</button>
+    <button id="btnClear" class="btn btn-muted">Clear history</button>
+
+    <!-- BMI Result -->
+    <div id="bmiResult" class="result-box"></div>
+
+    <!-- History Table -->
+    <h3>History</h3>
+    <div class="table-wrap">
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Weight (kg)</th>
+            <th>Height</th>
+            <th>BMI</th>
+            <th>Category</th>
+            <th>Weight Change to Normal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody><!-- rows injected by JS --></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
